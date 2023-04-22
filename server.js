@@ -17,7 +17,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", function (req, res) {
-    res.send("it worked" + process.env.REACT_APP_HOST_AWS_SQL)
+    
     const sqlSelect = "Select * From users;"
     db.query(sqlSelect, (err, result) => {
         res.send(result);
